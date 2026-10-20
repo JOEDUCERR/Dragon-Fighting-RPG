@@ -2,83 +2,43 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>RPG - Dragon Repeller</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dragon Repeller — An RPG Adventure</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <div id="game">
+            <h1 id="title">🐉 Dragon Repeller</h1>
+
             <div id="stats">
-                <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
-                <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+                <span class="stat">Level: <strong><span id="levelText">1</span></strong></span>
+                <span class="stat">XP: <strong><span id="xpText">0</span></strong>/<span id="xpNeededText">20</span></span>
+                <span class="stat">Health: <strong><span id="healthText">100</span></strong>/<span id="maxHealthText">100</span></span>
                 <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+                <div class="bar-wrap"><div id="healthBar"></div></div>
             </div>
+
+            <div id="monsterStats">
+                <span class="stat">👹 <strong><span id="monsterName"></span></strong> <small>(Lv <span id="monsterLevel"></span>)</small></span>
+                <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+                <div class="bar-wrap"><div id="monsterHealthBar"></div></div>
+            </div>
+
             <div id="controls">
                 <button id="button1">Go to store</button>
-                <button id="button2">Go to cave</button>
-                <button id="button3">Fight Dragon</button>
+                <button id="button2">Visit tavern</button>
+                <button id="button3">Go to cave</button>
+                <button id="button4">Go to forest</button>
             </div>
-            <div id="monsterStats">
-                <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
-                <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+
+            <div id="text">Welcome to Dragon Repeller. A terrible dragon has been terrorizing the
+                town and has sealed every road out of the valley. You are in the town square.
+                Where do you want to go? Use the buttons above.
             </div>
-            <div id="text">Welcome to Draon Repeller. You must defeat the dragon that is preventing people
-                from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
-            </div>
+
+            <div id="inventory"></div>
         </div>
         <script src="script.js"></script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Velvet</title>
-        <link rel="icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.ZrXpRyxg_47uGE-WnVzJjAHaHa%3Fpid%3DApi&f=1&ipt=b9fef51d38db1e832f011d19576a61e8f24112917e3bb6154097bf30a19070db&ipo=images">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <iframe src="https://google.com" height="300" width="300" style="border: none;"></iframe>
-
-        <div style="color: aqua; background-color: black;">
-            <h1>Welcome to the World of Velvet!</h1>
-            <p>A happy n humble british cocker spaniel.</p>
-        </div>
-
-        <hr>
-        <pre>
-Stats:
-Long fur
-Snores like he has a full time job
-Loves hunting random lizards
-Puppy dog eyes overloaded
-<hr>
-        </pre>
-
-        <a href="https://www.instagram.com/velvetine_velvet?igsh=OG85MjQ3ZHFubHQ2" target="_blank">Follow him on Instagram<br></a>
-        <a href="mailto:kcbcrocks@protonmail.com">Send me an email<br></a>
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F5e%2Fa5%2F2d%2F5ea52d8535988ec2ee88e339b76f2aa9.jpg&f=1&nofb=1&ipt=57f8433488cbfcc362c841f4f975520af21dcfbf155cc542d890bd7ceae31dc5">
-    </body>
-</html> -->
