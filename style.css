@@ -1,40 +1,138 @@
 body {
-    background-color: darkblue;
-}
-
-#text {
-    background-color: black;
-    color: white;
-    padding: 10px;
+    background: radial-gradient(ellipse at top, #1b2733 0%, #090a0f 100%);
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    min-height: 95vh;
 }
 
 #game {
-    max-width: 500px;
-    max-height: 400px;
-    background-color: lightgray;
-    color: white;
-    padding: 10px;
+    width: 100%;
+    max-width: 560px;
+    background-color: #2b2b2b;
+    color: #e8e6e3;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px solid #6b4f2a;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
 }
 
-#controls {
-    border: 1px black solid;
-    padding: 5px;
+#title {
+    margin: 0 0 10px 0;
+    text-align: center;
+    color: #f5c542;
+    text-shadow: 0 0 12px rgba(245, 197, 66, 0.4);
+    font-size: 26px;
+    letter-spacing: 1px;
 }
 
 #stats {
-    border: 1px black solid;
-    color: black;
-    padding: 5px;
-}
-
-#monnsterStats {
-    display: none;
-    border: 1px black solid;
-    color: white;
-    padding: 5px;
-    background-color: red;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
 }
 
 .stat {
-    padding-right: 10px;
+    padding-right: 4px;
 }
+
+.bar-wrap {
+    width: 100%;
+    height: 14px;
+    background: #111;
+    border: 1px solid #555;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+#healthBar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    transition: width 0.3s ease;
+}
+
+#healthBar.low {
+    background: linear-gradient(90deg, #b71c1c, #f44336);
+}
+
+#monsterStats {
+    display: none;
+    border: 1px solid #5c1f1f;
+    border-radius: 6px;
+    padding: 8px;
+    color: #f1f1f1;
+    background-color: #5c1f1f;
+    margin-top: 10px;
+}
+
+#monsterHealthBar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #d32f2f, #ff7043);
+    transition: width 0.3s ease;
+}
+
+#controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+#controls button {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background: linear-gradient(#4a4a4a, #3a3a3a);
+    color: #ffe9a8;
+    border: 1px solid #6b4f2a;
+    border-radius: 6px;
+    transition: background 0.15s, transform 0.1s;
+}
+
+#controls button:hover:not(.disabled) {
+    background: linear-gradient(#5c5c5c, #474747);
+    transform: translateY(-1px);
+}
+
+#controls button.disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    color: #999;
+}
+
+#text {
+    background-color: #191919;
+    color: #e8e6e3;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+#inventory {
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px dashed #555;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #cfc7bd;
+}
+
+/* Message highlights */
+.heal  { color: #7ad27a; font-weight: bold; }
+.dmg   { color: #ff7b6b; font-weight: bold; }
+.crit  { color: #f5c542; font-weight: bold; text-shadow: 0 0 6px rgba(245,197,66,.4); }
+.miss  { color: #9aa0a6; font-style: italic; }
+.power { color: #7fd1ff; }
